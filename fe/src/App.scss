@@ -1,0 +1,232 @@
+@use "Style/colors" as color;
+
+@keyframes translate {
+    0% {
+        background-position: right top;
+    }
+    50% {
+        background-position: right top;
+    }
+    100% {
+        background-position: left top;
+    }
+}
+
+.App-light {
+    .themes {
+        button {
+            border: 0.5px solid color.$highlight-light;
+        }
+        .lightBtn {
+            border-bottom-left-radius: 10px;
+            color: color.$bg-light;
+            background-color: color.$highlight-light;
+            transition: transform 0.5s ease;
+        }
+        .lightBtn:hover {
+            transform: scale(1.1) translateX(-3px);
+        }
+        .darkBtn {
+            border-top-right-radius: 10px;
+            color: color.$highlight-light;
+            background-color: transparent;
+            transition: transform 0.5s ease;
+        }
+        .darkBtn:hover {
+            transform: scale(1.1) translateX(3px);
+        }
+    }
+
+    .LandingPage {
+        min-height: 100vh;
+        background-color: color.$bg-light;
+
+        h1 {
+            color: color.$title-light;
+        }
+
+        p {
+            color: color.$text-light;
+        }
+
+        strong {
+            color: color.$highlight-light;
+        }
+
+        i {
+            color: color.$highlight-light;
+        }
+
+        .Headers {
+            .emaillink {
+                text-decoration: none;
+                color: color.$highlight-light;
+            }
+
+            .landingBtns {
+                height: 100%;
+
+                button {
+                    position: relative;
+                    border: none;
+                    max-width: 200px;
+                    height: 60px;
+                    font-size: 18px;
+                    margin: 10px;
+                    border-radius: 10px;
+                    color: color.$highlight-light;
+                    background: linear-gradient(
+                        to right,
+                        color.$highlight-light 50%,
+                        color.$bg-light 50%
+                    );
+                    background-size: 190% 100%;
+                    background-position: right top;
+                    font-weight: 500;
+                    transition-property: background-position color;
+                    transition-duration: 0.4s;
+                    transition-timing-function: ease;
+                }
+
+                button:hover {
+                    color: color.$bg-light;
+                    background-size: 200% 100%;
+                    background-position: left top;
+                }
+            }
+
+            .thirdCol {
+                height: 20vh;
+
+                .aboutme {
+                    text-decoration: none;
+                    position: relative;
+                    cursor: pointer;
+                    background: linear-gradient(
+                        to right,
+                        color.$title-light 46%,
+                        color.$bg-light,
+                        color.$title-light 54%
+                    );
+                    background-size: 220% 100%;
+                    background-position: right top;
+                    background-clip: text;
+                    color: transparent;
+                    animation: translate 6s ease-out infinite;
+                }
+            }
+
+            .secondCol {
+                height: 80vh;
+            }
+
+            .firstCol {
+                height: 80vh;
+            }
+        }
+    }
+}
+
+.App-dark {
+    .themes {
+        button {
+            border: 0.5px solid color.$highlight-dark;
+        }
+        .lightBtn {
+            border-bottom-left-radius: 10px;
+            color: color.$highlight-dark;
+            background-color: transparent;
+            transition: transform 0.5s ease;
+        }
+        .lightBtn:hover {
+            transform: scale(1.1) translateX(-3px);
+        }
+        .darkBtn {
+            border-top-right-radius: 10px;
+            color: color.$bg-dark;
+            background-color: color.$highlight-dark;
+            transition: transform 0.5s ease;
+        }
+        .darkBtn:hover {
+            transform: scale(1.1) translateX(3px);
+        }
+    }
+
+    .LandingPage {
+        min-height: 100vh;
+        background-color: color.$bg-dark;
+
+        h1 {
+            color: color.$title-dark;
+        }
+
+        p {
+            color: color.$text-dark;
+        }
+
+        strong {
+            color: color.$highlight-dark;
+        }
+
+        i {
+            color: color.$highlight-dark;
+        }
+
+        .Headers {
+            .emaillink {
+                text-decoration: none;
+                color: color.$highlight-dark;
+            }
+
+            .landingBtns {
+                height: 100%;
+
+                button {
+                    border: none;
+                    max-width: 200px;
+                    height: 60px;
+                    font-size: 18px;
+                    margin: 10px;
+                    border-radius: 10px;
+                    border: 3px solid color.$highlight-dark;
+                    color: color.$highlight-dark;
+                    font-weight: 500;
+                    background-color: color.$bg-dark;
+                    transition: box-shadow 0.4s;
+                }
+                button:hover {
+                    box-shadow: inset 0 0 0.5rem 0 color.$highlight-dark,
+                        0 0 0.5rem 0 color.$highlight-dark;
+                }
+            }
+
+            .thirdCol {
+                height: 20vh;
+                .aboutme {
+                    text-decoration: none;
+                    position: relative;
+                    cursor: pointer;
+                    background: linear-gradient(
+                        to right,
+                        color.$title-dark 46%,
+                        color.$highlight-dark,
+                        color.$title-dark 54%
+                    );
+                    background-size: 220% 100%;
+                    background-position: right top;
+                    background-clip: text;
+                    color: transparent;
+                    animation: translate 6s ease-out infinite;
+                }
+            }
+
+            .secondCol {
+                height: 80vh;
+            }
+
+            .firstCol {
+                height: 80vh;
+            }
+        }
+    }
+}
