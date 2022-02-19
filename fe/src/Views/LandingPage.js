@@ -43,7 +43,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="thirdCol col-12  d-flex flex-column justify-content-center">
-                        <a className="aboutme display-6 text-center">
+                        <a href="" className="aboutme display-6 text-center">
                             More About Me
                         </a>
                     <i
