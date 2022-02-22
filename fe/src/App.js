@@ -8,7 +8,7 @@ import Theme from "./Components/Theme";
 
 function App() {
 
-  const [theme, setTheme] = useState("light")
+  const [theme, setTheme] = useState(window.localStorage.theme ? localStorage.theme : "light")
 
   return (
     <div className={`App-${theme}`}>

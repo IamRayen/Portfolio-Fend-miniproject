@@ -1,9 +1,10 @@
 import React from "react";
+import About from "../Components/About";
 
 const LandingPage = () => {
     return (
-        <div className="LandingPage container-fluid">
-            <section className="Headers  row d-flex flex-wrap">
+        <div className="LandingPage container-fluid p-0">
+            <section className="Headers  row d-flex flex-wrap px-3">
                 <div className=" firstCol col-12 col-md-7 d-flex flex-column justify-content-center">
                     <h1 className=" display-2 ps-5">Hello,</h1>
                     <br />
@@ -36,14 +37,14 @@ const LandingPage = () => {
                 </div>
                 <div className="secondCol  col-12 col-md-5">
                     <div className="landingBtns row p-5  lead d-flex flex-wrap justify-content-center align-content-center">
-                        <button type="button">Background</button>
-                        <button type="button">Skills</button>
-                        <button type="button">Projects</button>
-                        <button type="button">Contact</button>
+                        <button href="#about" type="button"><a href="#about">Background</a></button>
+                        <button type="button"><a href="#skills">Skills</a></button>
+                        <button type="button"><a href="#projects">Projects</a></button>
+                        <button type="button"><a href="#contact">Contact</a></button>
                     </div>
                 </div>
                 <div className="thirdCol col-12  d-flex flex-column justify-content-center">
-                        <a href="/#" className="aboutme display-6 text-center">
+                        <a href="#about" className="aboutme display-6 text-center">
                             More About Me
                         </a>
                     <i
@@ -52,7 +53,9 @@ const LandingPage = () => {
                     ></i>
                 </div>
             </section>
-            <section></section>
+            <section id="about" className="about-section container-fluid">
+                <About/>
+            </section>
             <section></section>
         </div>
     );

@@ -12,6 +12,18 @@
     }
 }
 
+@keyframes underlineAnimation {
+    0% {
+        background-color: right top;
+    }
+    50% {
+        background-color: right top;
+    }
+    100% {
+        background-position: left top;
+    }
+}
+
 .App-light {
     .themes {
         button {
@@ -71,10 +83,8 @@
                     border: none;
                     max-width: 200px;
                     height: 60px;
-                    font-size: 18px;
                     margin: 10px;
                     border-radius: 10px;
-                    color: color.$highlight-light;
                     background: linear-gradient(
                         to right,
                         color.$highlight-light 50%,
@@ -82,14 +92,26 @@
                     );
                     background-size: 190% 100%;
                     background-position: right top;
-                    font-weight: 500;
-                    transition-property: background-position color;
+                    transition-property: background-position;
                     transition-duration: 0.4s;
                     transition-timing-function: ease;
+
+                    a {
+                        font-weight: 500;
+                        text-decoration: none;
+                        color: color.$highlight-light;
+                        font-size: 18px;
+                        transition-property: color;
+                        transition-duration: 0.8s;
+                        transition-timing-function: ease;
+                    }
                 }
 
                 button:hover {
-                    color: color.$bg-light;
+                    a {
+                        color: color.$bg-light;
+                    }
+
                     background-size: 200% 100%;
                     background-position: left top;
                 }
@@ -124,6 +146,52 @@
                 height: 80vh;
             }
         }
+        .about-section {
+            height: 100vh;
+            overflow: hidden;
+            padding-top: calc(100vh * 0.1);
+            .About-container {
+                position: relative;
+                left: -25%;
+                transform: rotateZ(3deg);
+                height: calc(100vh * 0.8);
+                width: 150%;
+                background-color: color.$highlight-light;
+
+                .about-content {
+                    transform: rotateZ(-3deg);
+                    position: relative;
+                    height: 500px;
+                    h1 {
+                        color: color.$bg-light;
+                    }
+                    p {
+                        color: color.$bg-light;
+                    }
+                    .linkedIn-link,
+                    i {
+                        color: color.$bg-light;
+                        font-weight: bold;
+                        position: relative;
+                    }
+                    .linkedIn-link:before {
+                        position: absolute;
+                        content: "";
+                        background-color: color.$bg-light;
+                        border-radius: 10px;
+                        transform: scaleX(0);
+                        width: 80%;
+                        bottom: 0;
+                        left: 0;
+                        height: 2px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    .linkedIn-link:hover:before {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -154,7 +222,9 @@
 
     .LandingPage {
         min-height: 100vh;
+        background-color: rgba(51, 51, 51, 0.8);
         background-color: color.$bg-dark;
+        transition: background-color 0.4s ease;
 
         h1 {
             color: color.$title-dark;
@@ -185,14 +255,18 @@
                     border: none;
                     max-width: 200px;
                     height: 60px;
-                    font-size: 18px;
                     margin: 10px;
                     border-radius: 10px;
                     border: 3px solid color.$highlight-dark;
-                    color: color.$highlight-dark;
-                    font-weight: 500;
                     background-color: color.$bg-dark;
                     transition: box-shadow 0.4s;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: color.$highlight-dark;
+                    }
                 }
                 button:hover {
                     box-shadow: inset 0 0 0.5rem 0 color.$highlight-dark,
@@ -226,6 +300,54 @@
 
             .firstCol {
                 height: 80vh;
+            }
+        }
+        .about-section {
+            height: 100vh;
+            overflow: hidden;
+            padding-top: calc(100vh * 0.1);
+            .About-container {
+                position: relative;
+                left: -25%;
+                transform: rotateZ(3deg);
+                height: calc(100vh * 0.8);
+                width: 150%;
+                border: 2px solid color.$highlight-dark;
+                box-shadow: inset 0 0 0.5rem 0 color.$highlight-dark,
+                    0 0 0.5rem 0 color.$highlight-dark;
+                .about-content {
+                    transform: rotateZ(-3deg);
+                    position: relative;
+                    height: 500px;
+                    h1 {
+                        color: color.$title-dark;
+                    }
+                    p {
+                        color: color.$text-dark;
+                    }
+                    .linkedIn-link,
+                    i {
+                        color: color.$text-dark;
+                        font-weight: bold;
+                        position: relative;
+                    }
+                    .linkedIn-link:before {
+                        position: absolute;
+                        content: "";
+                        background-color: color.$text-dark;
+                        box-shadow: 0 0 0.5rem 0 color.$highlight-dark;;
+                        border-radius: 10px;
+                        transform: scaleX(0);
+                        width: 80%;
+                        bottom: -2px;
+                        left: 0;
+                        height: 2px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    .linkedIn-link:hover:before {
+                        transform: scaleX(0.99);
+                    }
+                }
             }
         }
     }
