@@ -25,6 +25,7 @@
 }
 
 .App-light {
+    overflow: hidden;
     .themes {
         button {
             border: 0.5px solid color.$highlight-light;
@@ -197,6 +198,9 @@
 }
 
 .App-dark {
+
+    overflow: hidden;
+    
     .themes {
         button {
             border: 0.5px solid color.$highlight-dark;
