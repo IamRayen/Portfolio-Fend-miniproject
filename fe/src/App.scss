@@ -52,6 +52,7 @@
     .LandingPage {
         min-height: 100vh;
         background-color: color.$bg-light;
+        transition: background-color 0.4s ease;
 
         h1 {
             color: color.$title-light;
