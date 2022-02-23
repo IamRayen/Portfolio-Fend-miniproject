@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
     return (
         <div className="About-container d-flex align-items-center pb-5">
-            <div className="about-content container d-flex flex-column flex-wrap p-4 ps-sm-5 px-5">
+            <div className="about-content container d-flex flex-column flex-wrap">
                 <h1 className="display-4">Who Is Rayen?</h1>
                 <br />
                 <p className="lead ps-3">

@@ -11,7 +11,7 @@ function App() {
   const [theme, setTheme] = useState(window.localStorage.theme ? localStorage.theme : "light")
 
   return (
-    <div className={`App-${theme}`}>
+    <div className={`App-${theme} App`}>
       <Theme setTheme={setTheme} theme={theme}/>
       <Routes>
         <Route path="/" element={<LandingPage setTheme={setTheme}/>}></Route>

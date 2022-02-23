@@ -24,6 +24,10 @@
     }
 }
 
+.App{
+
+}
+
 .App-light {
     overflow: hidden;
     .themes {
@@ -159,7 +163,7 @@
                 position: relative;
                 left: -25%;
                 transform: rotateZ(3deg);
-                height: calc(100vh * 0.8);
+                height: 600px;
                 width: 150%;
                 background-color: color.$highlight-light;
 
@@ -320,7 +324,7 @@
                 position: relative;
                 left: -25%;
                 transform: rotateZ(3deg);
-                height: calc(100vh * 0.8);
+                height: 600px;
                 width: 150%;
                 border: 2px solid color.$highlight-dark;
                 box-shadow: inset 0 0 0.5rem 0 color.$highlight-dark,
@@ -372,7 +376,8 @@
             .about-section {
                 .About-container {
                     .about-content {
-                        max-width: 80%;
+                        max-width: 70%;
+                        padding-top: 50px;
                     }
                 }
             }
