@@ -24,7 +24,7 @@ const About = () => {
                     the programming field.
                     <br />
                     Next year I will be studying Software Engineering in Germany
-                    while using and developing my skills as a web deveoper.
+                    while using and developing my skills as a web developer.
                 </p>
                 <br />
                 <p className="fs-5">
