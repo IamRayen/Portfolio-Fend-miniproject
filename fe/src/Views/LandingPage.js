@@ -16,7 +16,7 @@ const LandingPage = () => {
                         <strong>Developer</strong>.
                     </p>
                     <br />
-                    <p className=" lead" style={{ fontSize: "2rem" }}>
+                    <p className="lead" style={{ fontSize: "2rem" }}>
                         Get in touch{" "}
                         <i
                             className="bi bi-arrow-right "
@@ -25,7 +25,6 @@ const LandingPage = () => {
                         <a
                             className="emaillink"
                             href="mailto:RayenLabidi@protonmail.com"
-                            style={{ fontSize: "2rem" }}
                         >
                             RayenLabidi@protonmail.com{" "}
                             <i
@@ -35,7 +34,7 @@ const LandingPage = () => {
                         </a>
                     </p>
                 </div>
-                <div className="secondCol  col-12 col-md-5">
+                <div className="secondCol d-none d-sm-flex col-12 col-md-5">
                     <div className="landingBtns row p-5  lead d-flex flex-wrap justify-content-center align-content-center">
                         <button href="#about" type="button"><a href="#about">Background</a></button>
                         <button type="button"><a href="#skills">Skills</a></button>

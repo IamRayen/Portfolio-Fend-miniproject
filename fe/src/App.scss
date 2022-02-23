@@ -146,6 +146,9 @@
 
             .firstCol {
                 height: 80vh;
+                .emaillink{
+                    font-size: 2rem;
+                }
             }
         }
         .about-section {
@@ -162,8 +165,8 @@
 
                 .about-content {
                     transform: rotateZ(-3deg);
+                    max-width: 60%;
                     position: relative;
-                    height: 500px;
                     h1 {
                         color: color.$bg-light;
                     }
@@ -198,9 +201,8 @@
 }
 
 .App-dark {
-
     overflow: hidden;
-    
+
     .themes {
         button {
             border: 0.5px solid color.$highlight-dark;
@@ -305,6 +307,9 @@
 
             .firstCol {
                 height: 80vh;
+                .emaillink{
+                    font-size: 2rem;
+                }
             }
         }
         .about-section {
@@ -323,7 +328,7 @@
                 .about-content {
                     transform: rotateZ(-3deg);
                     position: relative;
-                    height: 500px;
+                    max-width: 60%;
                     h1 {
                         color: color.$title-dark;
                     }
@@ -340,7 +345,7 @@
                         position: absolute;
                         content: "";
                         background-color: color.$text-dark;
-                        box-shadow: 0 0 0.5rem 0 color.$highlight-dark;;
+                        box-shadow: 0 0 0.5rem 0 color.$highlight-dark;
                         border-radius: 10px;
                         transform: scaleX(0);
                         width: 80%;
@@ -351,6 +356,31 @@
                     }
                     .linkedIn-link:hover:before {
                         transform: scaleX(0.99);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//media for about responsiveness
+
+@media screen and (max-width: 500px) {
+    .App-light,
+    .App-dark {
+        .LandingPage {
+            .about-section {
+                .About-container {
+                    .about-content {
+                        max-width: 80%;
+                    }
+                }
+            }
+            .Headers {
+                .firstCol {
+                    height: 70vh;
+                    .emaillink {
+                        font-size: 1.5rem;
                     }
                 }
             }
